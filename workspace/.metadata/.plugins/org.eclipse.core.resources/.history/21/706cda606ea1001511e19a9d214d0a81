@@ -1,0 +1,9 @@
+package csc.truong.assignment2.model;
+
+public class Address {
+
+	private String street;
+	private String city;
+	
+	
+}

@@ -1,0 +1,23 @@
+package csc.truong.assignment1;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class AssignMain {
+
+	public AssignMain() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+
+		Student obj = (Student) context.getBean("student");
+		
+		System.out.println("Name: " + obj.getName());
+
+		obj.printAddress();
+		
+	}
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="csc.truong.assignment2.Address" table="address" >
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="increment" />
+        </id>
+        
+        <property name="subject" type="string">
+            <column name="street" length="30" not-null="true" />
+        </property>
+        
+        <property name="score" type="int">
+            <column name="score" length="2" not-null="true" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,74 @@
+package csc.truong.assignment2.dao;
+
+import java.util.List;
+import java.util.Map;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import csc.truong.assignment2.model.Student;
+
+public class StudentDao extends Student{
+	private String name;
+	private String sex;
+	private Address address;
+	private List<Score> score;
+	private SessionFactory sessionFactory;
+	
+	public StudentDao() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public void create(StudentDao student) {
+		Session session = getSessionFactory().openSession();
+        Transaction tx = session.beginTransaction();
+        session.save(student);
+        tx.commit();
+        session.close();
+	}
+
+
+	public StudentDao getStudent(Integer id) {
+		Session session = getSessionFactory().openSession();
+		StudentDao student = (StudentDao) session.get(StudentDao.class, id);
+		session.close();
+		return student;
+	}
+
+	
+	public List<StudentDao> listStudents() {
+		Session session = getSessionFactory().openSession();
+        List<StudentDao> list = session.createQuery("from Student").list();
+        session.close();
+        return list;
+	}
+
+	
+	public void delete(Integer id) {
+		Session session = getSessionFactory().openSession();
+		Transaction tx = session.beginTransaction();
+		StudentDao student = (StudentDao) session.get(StudentDao.class, id);
+		session.delete(student);
+		tx.commit();
+		session.close();
+	}
+
+	
+	public void update(StudentDao student) {
+		Session session = getSessionFactory().openSession();
+		Transaction tx = session.beginTransaction();
+		session.saveOrUpdate(student);;
+		tx.commit();
+		session.close();
+	}
+
+	public SessionFactory getSessionFactory() {
+		return sessionFactory;
+	}
+
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
+
+}

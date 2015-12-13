@@ -1,0 +1,28 @@
+package csc.truong.assignment1;
+
+import java.util.Map;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class AssignMain {
+
+	public AssignMain() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+
+		Student obj = (Student) context.getBean("student");
+		
+		System.out.println("Name: " + obj.getName());
+		System.out.println("Address: " + obj.getAddress());
+		
+		Map score = obj.getScore();
+		System.out.println("Toan: " + score.get("Toan"));
+		float finalScore = ((float)score.get("Toan") + (float)score.get("Ly") + (float)score.get("Hoa"))/3;
+		
+	}
+}

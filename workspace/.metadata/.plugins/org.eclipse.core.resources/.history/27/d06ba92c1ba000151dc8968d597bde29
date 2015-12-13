@@ -1,0 +1,6 @@
+package csc.truong.assignment2;
+
+public class Score {
+	private String name;
+	private float score;
+}

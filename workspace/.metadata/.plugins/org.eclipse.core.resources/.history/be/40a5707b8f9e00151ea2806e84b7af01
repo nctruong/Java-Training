@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+package nctruong.atm;
+
+/**
+ * @author truong
+ *
+ */
+public class Customer {
+
+	/**
+	 * 
+	 */
+	private String name;
+	private int pin;
+	private int actived;
+	private float amount;
+	private String validTo;
+	
+	public Customer() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

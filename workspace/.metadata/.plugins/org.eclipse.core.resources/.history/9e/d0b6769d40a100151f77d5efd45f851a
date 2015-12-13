@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="csc.truong.assignment2.Student" table="student" >
+        <id name="studentId" type="integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="30" not-null="true" />
+        </property>
+        <property name="sex" type="string">
+            <column name="sex" length="1" not-null="true" />
+        </property>
+        <one-to-one name="address" 
+        				class="csc.truong.assignment2.Address" 
+        					cascade="save-update">
+        </one-to-one>
+       
+       <set name="score" table="score" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id" not-null="true" />
+            </key>
+            <one-to-many class="sc.truong.assignment2.Score" />
+        </set>
+    </class>
+</hibernate-mapping>

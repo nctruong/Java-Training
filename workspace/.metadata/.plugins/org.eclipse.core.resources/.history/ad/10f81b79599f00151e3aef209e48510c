@@ -1,0 +1,10 @@
+package csc.truong.assignment1;
+
+public class Adress {
+
+	
+	public Adress() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

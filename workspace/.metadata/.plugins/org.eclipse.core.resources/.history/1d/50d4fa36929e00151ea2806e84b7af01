@@ -1,0 +1,51 @@
+/**
+ * 
+ */
+package nctruong.atm.transaction;
+
+import nctruong.atm.ATM;
+import nctruong.atm.Balances;
+import nctruong.atm.Message;
+import nctruong.atm.Session;
+
+/**
+ * @author truong
+ *
+ */
+public class Transaction {
+
+	/**
+	 * 
+	 */
+	protected ATM atm;
+	protected Session session;
+	protected String username;
+	protected int pin;
+	protected Message message;
+	protected Balances balances;
+	protected int state;
+	
+	private final int INVALID_PIN_STATE = 0;
+	private final int COMPLETING_TRANSACTION_STATE = 0;
+	private final int ASKING_ANOTHER_STATE = 0;
+	
+	public Transaction(ATM atm, Session session,String username, String pin ) {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Transaction makeTransaction(ATM atm, Session session, String username, int pin){
+		
+	}
+	
+	public boolean performTransaction(){
+		
+	}
+	
+	public boolean performGetValidPin(){
+		
+	}
+	
+	public Message getMessage(){}
+	
+	public completeTransaction(){} // 
+}

@@ -1,0 +1,19 @@
+/**
+ * 
+ */
+package nctruong.atm;
+
+/**
+ * @author truong
+ *
+ */
+public class Customer {
+
+	/**
+	 * 
+	 */
+	public Customer() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

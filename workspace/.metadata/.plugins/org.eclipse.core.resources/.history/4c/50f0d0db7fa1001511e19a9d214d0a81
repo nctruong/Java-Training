@@ -1,0 +1,54 @@
+package csc.truong.assignment2.model;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+
+import csc.truong.assignment2.model.Score;
+import csc.truong.assignment2.model.Address;
+
+public class Student implements java.io.Serializable {
+	private int id;
+	private String name;
+	private String sex;
+	
+	private Address address;	
+	private List<Score> score = new ArrayList<Score>(0);	
+	
+	public Student(){
+		
+	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getSex() {
+		return sex;
+	}
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+	public List<Score> getScore() {
+		return score;
+	}
+	public void setScore(ArrayList<Score> scoreList) {
+		this.score = scoreList;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+	
+	<!-- Definition for javaCollection -->
+   
+   <bean id="student" class="csc.truong.assignment1.Student" autowire="byType">
+	   	<property name="score">
+	         <map>
+	            <entry key="Toan" value="9"/>
+	            <entry key="Ly" value="8"/>
+	            <entry key="Hoa" value="6"/>
+	         </map>
+	    </property>
+	    <property name="name" value="Nguyen Cong Truong"></property>
+   </bean>
+   
+   <bean id="address" class="csc.truong.assignment1.Address">
+   		<property name="address" value="HCM, VIETNAM">
+	         
+	    </property>
+   </bean>
+</beans>
+

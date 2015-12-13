@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="sample-setter-injection"/>
+<aop-project name="sample-contructor-injection"/>
+<aop-project name="sample-autowire-byname"/>
+<aop-project name="sample-hello"/>
+<aop-project name="sample-autowire-bytype"/>
+<aop-project name="sample-collection-injection"/>
+<aop-project name="sample-autowire-bycontructor"/>
+<aop-project name="spring-hibernate-xml"/>
+<aop-project name="sample-annotation-autowire-contructor"/>
+<aop-project name="sample-annotation-autowire-setter"/>
+<aop-project name="sample-inner-bean"/>
+<aop-project name="Assignment2"/>
+<aop-project name="spring-data-jdbc"/>
+</aop-reference-model>

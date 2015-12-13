@@ -1,0 +1,19 @@
+1449986413359	Delete element
+1449987300030	Rename type 'Student'
+1449987449212	Move compilation unit
+1449987467875	Move compilation unit
+1449987551668	Rename package 'csc.truong.assignment2.Model'
+1449988063857	Delete element
+1449988578059	Delete element
+1449988632003	Rename resource 'Student.hbm.xml'
+1449988644109	Rename resource 'Address.hbm.xml'
+1449988653768	Rename resource 'Score.hbm.xml'
+1449989022059	Delete element
+1449989037959	Delete element
+1449989048253	Delete element
+1449993232693	Encapsulate field 'id'
+1449993633764	Encapsulate field 'student'
+1449993820733	Encapsulate field 'student'
+1449997476492	Convert local variable 'scoreList' to field
+1449997528186	Infer generic type arguments
+1449997535686	Infer generic type arguments

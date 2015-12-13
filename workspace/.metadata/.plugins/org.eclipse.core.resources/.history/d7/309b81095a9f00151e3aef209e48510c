@@ -1,0 +1,26 @@
+package csc.truong.assignment1;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import collection_injection.CollectionSample;
+
+public class AssignMain {
+
+	public AssignMain() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+
+		CollectionSample obj = (CollectionSample) context.getBean("student");
+
+		obj.getAddressList();
+		obj.getAddressSet();
+		obj.getAddressMap();
+		obj.getAddressProp();
+	}
+
+}
