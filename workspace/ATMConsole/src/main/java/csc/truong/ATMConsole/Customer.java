@@ -10,20 +10,22 @@ import java.util.Date;
  *
  */
 public class Customer {
-
-	/**
-	 * 
-	 */
+	
 	private String name;
 	private int pin;
-	private int actived;
+	private int activated;
 	private float amount;
-	private Date validTo;
+	private String validTo;
 	
-	public Customer() {
+	public Customer(){}
+	public Customer(String name,int pin) {
 		// TODO Auto-generated constructor stub
+		this.name = name;
+		this.pin  = pin;
 	}
-
+	
+	
+	
 	public String getName() {
 		return name;
 	}
@@ -40,28 +42,34 @@ public class Customer {
 		this.pin = pin;
 	}
 
-	public int getActived() {
-		return actived;
+	public int getActivated() {
+		return activated;
 	}
 
-	public void setActived(int actived) {
-		this.actived = actived;
+	public void setActivated(int activated) {
+		this.activated = activated;
 	}
 
+	
 	public float getAmount() {
 		return amount;
 	}
-
 	public void setAmount(float amount) {
 		this.amount = amount;
 	}
-
-	public Date getValidTo() {
+	public String getValidTo() {
 		return validTo;
 	}
+	public void setValidTo(String validTo) {
+		this.validTo = validTo;
+	}
 
-	public void setValidTo(Date date) {
-		this.validTo = date;
+	public void setProperties(Customer cus){
+		this.name		= cus.getName();
+		this.pin		= cus.getPin();
+		this.activated	= cus.getActivated();
+		this.amount		= cus.getAmount();
+		this.validTo	= cus.getValidTo();
 	}
 	
 	
